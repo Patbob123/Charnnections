@@ -2,7 +2,7 @@ const { useState, useEffect } = React;
 
 const API_BASE = window.location.hostname === 'localhost' 
   ? 'http://localhost:3001/api' 
-  : 'https://www.charnnections.tech/api';
+  : 'https://charnnections.onrender.com/';
 
 const DIFFICULTY_COLORS = {
   1: 'bg-green-500',
