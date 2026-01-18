@@ -2,6 +2,8 @@ require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 
 const app = express();
 app.use(express.json());
@@ -9,6 +11,20 @@ app.use(express.static('static'));
 app.use('/src', express.static('src'));
 app.use('/views', express.static('views'));
 app.use(express.static("public"));
+app.use(cors({
+  origin: [
+    'https://charnnections.onrender.com',
+    'https://charnnections.tech',
+    'https://www.charnnections.tech',
+    'http://localhost:3000',
+    'http://localhost:3001'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
