@@ -1,6 +1,8 @@
 const { useState, useEffect } = React;
 
-const API_BASE = 'http://charnnections.onrender.com/api';
+const API_BASE = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3001/api' 
+  : 'https://www.charnnections.tech/api';
 
 const DIFFICULTY_COLORS = {
   1: 'bg-green-500',
