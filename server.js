@@ -479,7 +479,7 @@ app.post('/api/admin/regenerate-today', async (req, res) => { // who cares we gp
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n ====== Charnnection Server running on port ${PORT} ======\n`);
   console.log('Endpoints:');
   console.log('  GET  /api/game/today            - Get today\'s connections');

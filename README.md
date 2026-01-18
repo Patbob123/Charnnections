@@ -25,3 +25,5 @@ Maybe it was all about the connections we made along the way.
 ## What's next for Charnnections
 
 un-weebify it
+
+## Is this bad for my digital footprint?
